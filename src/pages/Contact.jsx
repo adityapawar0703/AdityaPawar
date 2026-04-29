@@ -4,6 +4,8 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { personal } from '../utils/data'
 import styles from './Contact.module.css'
+// testing 
+import emailjs from '@emailjs/browser'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -97,22 +99,51 @@ export default function Contact() {
 
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
-  /* Form submit — opens mailto (no backend needed) */
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setStatus('sending')
+  // /* Form submit — opens mailto (no backend needed) */
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   setStatus('sending')
 
-    const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`)
-    const body    = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`)
-    const mailto  = `mailto:${personal.email}?subject=${subject}&body=${body}`
+  //   const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`)
+  //   const body    = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`)
+  //   const mailto  = `mailto:${personal.email}?subject=${subject}&body=${body}`
 
-    setTimeout(() => {
-      window.location.href = mailto
-      setStatus('sent')
-      setForm({ name: '', email: '', message: '' })
-      setTimeout(() => setStatus('idle'), 4000)
-    }, 600)
-  }
+  //   setTimeout(() => {
+  //     window.location.href = mailto
+  //     setStatus('sent')
+  //     setForm({ name: '', email: '', message: '' })
+  //     setTimeout(() => setStatus('idle'), 4000)
+  //   }, 600)
+  // }
+
+  // this si trial for emailjs
+  
+
+const handleSubmit = (e) => {
+  e.preventDefault()
+  setStatus('sending')
+
+  emailjs.send(
+    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    {
+      name: form.name,
+      email: form.email,
+      message: form.message,
+    },
+    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+  )
+  .then(() => {
+    setStatus('sent')
+    setForm({ name: '', email: '', message: '' })
+
+    setTimeout(() => setStatus('idle'), 4000)
+  })
+  .catch((error) => {
+    console.error(error)
+    setStatus('error')
+  })
+}
 
   const isValid = form.name && form.email && form.message
 
