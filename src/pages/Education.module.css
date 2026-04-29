@@ -1,0 +1,248 @@
+/* Education.module.css */
+.section { background: var(--bg-primary); }
+
+/* EDUCATION CARDS */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.cardLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.cardDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--border-strong);
+  border: 2px solid var(--bg-primary);
+  outline: 2px solid var(--border-strong);
+  flex-shrink: 0;
+  margin-top: 6px;
+  transition: background 0.2s ease;
+}
+.cardHighlight .cardDot { background: var(--accent); outline-color: var(--accent); }
+
+.cardLine {
+  width: 1.5px;
+  flex: 1;
+  background: var(--border);
+  margin: 6px 0;
+  min-height: 30px;
+}
+.card:last-child .cardLine { display: none; }
+
+.cardRight {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.cardRight:hover { border-color: var(--accent); transform: translateX(4px); }
+.cardHighlight .cardRight {
+  border-color: var(--accent);
+  background: linear-gradient(135deg, var(--bg-card), var(--accent-soft));
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.degree {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.currentBadge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  border: 1px solid var(--accent);
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.institution {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.cardMeta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.period, .grade {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.grade strong { color: var(--accent); font-weight: 700; }
+
+/* GRAPH SECTION */
+.graphSection {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.graphHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.graphTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.graphSub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Toggle SGPA / CGPA */
+.toggle {
+  display: flex;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 3px;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.toggleBtn {
+  padding: 0.45rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.toggleActive {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(232, 93, 38, 0.35);
+}
+
+/* Current value pill */
+.currentPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: 50px;
+  padding: 0.4rem 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pillLabel {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.pillValue {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+.pillSem {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* SVG Graph */
+.graphWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.svg {
+  width: 100%;
+  min-width: 380px;
+  height: auto;
+  display: block;
+}
+
+/* Legend */
+.graphLegend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--graph-line);
+}
+
+.legendNote {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .graphSection { padding: 1.5rem 1rem; }
+  .graphHeader { flex-direction: column; }
+  .graphLegend { flex-direction: column; align-items: flex-start; }
+  .cardRight { padding: 1rem; }
+}

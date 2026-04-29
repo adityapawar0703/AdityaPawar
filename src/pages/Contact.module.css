@@ -1,0 +1,268 @@
+/* Contact.module.css */
+.section { background: var(--bg-primary); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* FORM SIDE */
+.formSide {}
+
+.intro {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+.intro strong { color: var(--accent); font-weight: 600; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.input,
+.textarea {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-primary);
+  width: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  resize: none;
+  outline: none;
+}
+.input:focus,
+.textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  border: none;
+  margin-top: 0.25rem;
+  align-self: flex-start;
+}
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 93, 38, 0.35);
+}
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sending { display: flex; align-items: center; gap: 0.5rem; }
+
+/* Social links */
+.socials {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  transition: all 0.2s ease;
+}
+.socialLink:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* VISUAL SIDE — 3D floating shape */
+.visualSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shapeScene {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Orbit ring */
+.orbitRing {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1.5px dashed var(--border-strong);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.orbitDot {
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--accent);
+  margin-top: -6px;
+}
+
+/* Main cube */
+.cube {
+  position: relative;
+  z-index: 3;
+  transform-style: preserve-3d;
+}
+
+.cubeInner {
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, var(--accent) 0%, #ff9a72 100%);
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-shadow:
+    0 30px 80px rgba(232, 93, 38, 0.35),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+  transform: perspective(400px) rotateX(8deg) rotateY(-8deg);
+  transition: transform 0.3s ease;
+}
+.cubeInner:hover {
+  transform: perspective(400px) rotateX(0deg) rotateY(0deg);
+}
+
+.cubeIcon { font-size: 2.5rem; }
+.cubeText {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+/* Floating particles */
+.particle {
+  position: absolute;
+  font-size: 1.3rem;
+  z-index: 4;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+.p1 { top: 20px;   right: 40px; }
+.p2 { bottom: 40px; left: 20px; }
+.p3 { top: 80px;   left: 30px; }
+
+/* Info cards */
+.infoCard1,
+.infoCard2 {
+  position: absolute;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+  z-index: 5;
+  font-weight: 500;
+}
+.infoCard1 { bottom: 30px; right: 10px; animation: floatCard 4s ease-in-out infinite; }
+.infoCard2 { top: 30px;    left: 0;    animation: floatCard 3.5s ease-in-out infinite reverse; }
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+/* FOOTER */
+.footer {
+  border-top: 1px solid var(--border);
+  margin-top: 6rem;
+  padding: 2rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.footer p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.footer strong { color: var(--accent); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .visualSide { order: -1; }
+  .shapeScene { width: 280px; height: 280px; }
+  .orbitRing  { width: 240px; height: 240px; }
+  .cubeInner  { width: 130px; height: 130px; }
+}
+
+@media (max-width: 480px) {
+  .submitBtn { align-self: stretch; justify-content: center; }
+  .socials   { gap: 0.5rem; }
+  .infoCard1 { display: none; }
+}
