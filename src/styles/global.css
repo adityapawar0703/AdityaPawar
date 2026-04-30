@@ -78,7 +78,9 @@ body {
 
 /* ---- TYPOGRAPHY ---- */
 h1, h2, h3, h4, h5 {
-  font-family: 'Syne', sans-serif;
+  /* font-family: 'Syne', sans-serif; */
+ /* font-family: 'Plus Jakarta Sans', sans-serif; */
+  font-family: 'Space Grotesk', sans-serif;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
