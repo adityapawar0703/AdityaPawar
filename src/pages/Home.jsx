@@ -131,11 +131,15 @@ export default function Home() {
             {/* Quick stats badges */}
             <div className={styles.badges} ref={badgesRef}>
               <div className={styles.badge}>
-                <span className={styles.badgeNum}>1000+</span>
+                <span className={styles.badgeNum}>60+</span>
                 <span className={styles.badgeLbl}>Platform Users</span>
               </div>
-              <div className={styles.badge}>
+              {/* <div className={styles.badge}>
                 <span className={styles.badgeNum}>500+</span>
+                <span className={styles.badgeLbl}>Visits & growing</span>
+              </div> */}
+              <div className={styles.badge}>
+                <span className={styles.badgeNum}>600+</span>
                 <span className={styles.badgeLbl}>DSA Problems</span>
               </div>
               <div className={styles.badge}>
@@ -143,7 +147,7 @@ export default function Home() {
                 <span className={styles.badgeLbl}>Current CGPA</span>
               </div>
               <div className={styles.badge}>
-                <span className={styles.badgeNum}>2</span>
+                <span className={styles.badgeNum}>2+</span>
                 <span className={styles.badgeLbl}>Live Projects</span>
               </div>
             </div>

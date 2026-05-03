@@ -69,7 +69,7 @@ export const projects = [
     id: 1,
     title: 'RGPV Essentials',
     subtitle: 'Full-Stack Academic Platform',
-    description: 'Production-grade academic platform for 1000+ users — offering notes, PYQs, job/hackathon updates, hostel/mess listings, and a student marketplace. Led a 3-member team.',
+    description: 'Production-grade academic platform for 60+ users — offering notes, PYQs, job/hackathon updates, hostel/mess listings, and a student marketplace. Led a 3-member team.',
     highlights: [
       'JWT Auth + Google OAuth with RESTful APIs',
       'Redis caching — 30% less DB strain, 25% faster APIs',
@@ -78,7 +78,7 @@ export const projects = [
     tech: ['Node.js', 'MongoDB', 'Redis', 'JWT', 'Azure', 'Express.js'],
     live: 'https://rgpvessentials.me/',
     github: 'https://github.com/adityapawar',
-    users: '1000+',
+    users: '60+',
     color: '#e85d26',
   },
   {
@@ -172,7 +172,7 @@ export const showcase = [
     id: 'rgpv',
     label: 'RGPV Essentials',
     icon: '🚀',
-    description: 'Live project — 1000+ users',
+    description: 'Live project — 60+ users',
     url: 'https://rgpvessentials.me/',
     image: '/images/rgpv.png',
     color: '#e85d26',
