@@ -102,7 +102,7 @@ export default function Home() {
             {/* Tagline */}
             <p className={styles.tagline} ref={tagRef}>
               <span className={styles.accentWord}>Full-Stack</span> Developer
-              <span className={styles.dot}>·</span> Cloud Enthusiast
+              <span className={styles.dot}>·</span> Software Developer
               <span className={styles.dot}>·</span> DSA Solver
             </p>
 
