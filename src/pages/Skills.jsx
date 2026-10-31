@@ -154,7 +154,7 @@ export default function Skills() {
         {/* Bottom note */}
         <div className={styles.bottomNote}>
           <span className={styles.noteIcon}>⚡</span>
-          <span>Solved <strong>500+</strong> DSA problems on LeetCode — Arrays, Graphs, Trees, Linked Lists</span>
+          <span>Solved <strong>660+</strong> DSA problems on LeetCode — Arrays, Graphs, Trees, Linked Lists</span>
         </div>
       </div>
     </section>

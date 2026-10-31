@@ -139,15 +139,15 @@ export default function Home() {
                 <span className={styles.badgeLbl}>Visits & growing</span>
               </div> */}
               <div className={styles.badge}>
-                <span className={styles.badgeNum}>600+</span>
+                <span className={styles.badgeNum}>660+</span>
                 <span className={styles.badgeLbl}>DSA Problems</span>
               </div>
               <div className={styles.badge}>
-                <span className={styles.badgeNum}>8.09</span>
-                <span className={styles.badgeLbl}>Current CGPA</span>
+                <span className={styles.badgeNum}>8.19</span>
+                <span className={styles.badgeLbl}>CGPA</span>
               </div>
               <div className={styles.badge}>
-                <span className={styles.badgeNum}>2+</span>
+                <span className={styles.badgeNum}>4+</span>
                 <span className={styles.badgeLbl}>Live Projects</span>
               </div>
             </div>

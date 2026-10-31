@@ -10,7 +10,7 @@ export const personal = {
   linkedin: 'https://in.linkedin.com/in/aditya-pawar-b654b629a',
   leetcode: 'https://leetcode.com/u/Adityapawar0703/',
   youtube: 'https://www.youtube.com/@Coding-Essentials',
-  about: `Full-Stack Developer with strong foundations in Data Structures, Algorithms, and scalable web application development. Skilled in Java, JavaScript, Node.js, Express.js, and MongoDB — with hands-on experience deploying production-grade applications on Azure and MongoDB Atlas. I love building systems that solve real problems at scale.`,
+  about: `Aspiring Full Stack Developer with strong foundations in Data Structures, Algorithms, and scalable web application development. Skilled in Java, JavaScript, Node.js, Express.js, and MongoDB — with hands-on experience deploying production-grade applications on Azure and MongoDB Atlas. I love building systems that solve real problems at scale.`,
   tagline: 'Building scalable full-stack solutions that matter.',
 }
 
@@ -19,15 +19,15 @@ export const education = [
     degree: 'B.Tech in Computer Science & Engineering',
     institution: 'Lakshmi Narain College of Technology & Science',
     location: 'Bhopal',
-    period: '2022 – June 2026',
-    cgpa: '8.09',
+    period: 'July 2022 – July 2026',
+    cgpa: '8.19',
     current: true,
   },
   {
     degree: '12th Grade (CBSE)',
     institution: 'Jawaharlal Nehru School',
     location: 'Bhopal',
-    period: '2022',
+    period: 'July 2022',
     cgpa: '81.4%',
     current: false,
   },
@@ -35,7 +35,7 @@ export const education = [
     degree: '10th Grade (CBSE)',
     institution: 'Jawaharlal Nehru School',
     location: 'Bhopal',
-    period: '2020',
+    period: 'July 2020',
     cgpa: '84.2%',
     current: false,
   },
@@ -50,6 +50,7 @@ export const sgpaData = [
   { sem: '5th', sgpa: 8.67 },
   { sem: '6th', sgpa: 8.33 },
   { sem: '7th', sgpa: 9.17 },
+  { sem: '8th', sgpa: 9.04 },
 ]
 
 // Cumulative CGPA (calculated progressively)
@@ -61,7 +62,7 @@ export const cgpaData = [
   { sem: '5th', cgpa: 7.82 },
   { sem: '6th', cgpa: 7.91 },
   { sem: '7th', cgpa: 8.09 },
-  // { sem: '8th', cgpa: 8.09 },
+  { sem: '8th', cgpa: 8.19 },
 ]
 
 export const projects = [
@@ -69,7 +70,7 @@ export const projects = [
     id: 1,
     title: 'RGPV Essentials',
     subtitle: 'Full-Stack Academic Platform',
-    description: 'Production-grade academic platform for 60+ users — offering notes, PYQs, job/hackathon updates, hostel/mess listings, and a student marketplace. Led a 3-member team.',
+    description: 'Production-grade academic platform for users — offering notes, PYQs, job/hackathon updates, hostel/mess listings, and a student marketplace. Led a 3-member team.',
     highlights: [
       'JWT Auth + Google OAuth with RESTful APIs',
       'Redis caching — 30% less DB strain, 25% faster APIs',

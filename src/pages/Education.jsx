@@ -156,7 +156,7 @@ export default function Education() {
               <div className={styles.cardRight}>
                 <div className={styles.cardHeader}>
                   <h3 className={styles.degree}>{edu.degree}</h3>
-                  {edu.current && <span className={styles.currentBadge}>Current</span>}
+                  {edu.current && <span className={styles.currentBadge}>2026 Graduate</span>}
                 </div>
                 <p className={styles.institution}>{edu.institution}, {edu.location}</p>
                 <div className={styles.cardMeta}>
