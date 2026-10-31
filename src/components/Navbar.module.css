@@ -117,10 +117,13 @@
   gap: 0.25rem;
   max-height: 0;
   overflow: hidden;
+  visibility: hidden;
   transition: max-height 0.4s ease;
 }
 .mobileMenu.mobileOpen {
   max-height: 400px;
+   visibility: visible;
+  transition: max-height 0.4s ease, visibility linear 0.4s;
 }
 .mobileLink {
   font-size: 1rem;
